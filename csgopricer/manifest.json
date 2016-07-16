@@ -1,0 +1,26 @@
+{
+
+  "description": "Simple market price overlay for inventory",
+  "manifest_version": 2,
+  "name": "CSGO Inventory Prices",
+  "version": "1.0",
+  
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "csgopricer@vcorreia.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://steamcommunity.com/id/*/inventory"],
+      "js": ["pricer.js"]
+    }
+  ]
+
+}
